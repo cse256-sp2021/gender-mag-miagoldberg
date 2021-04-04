@@ -174,6 +174,7 @@ function define_new_effective_permissions(id_prefix, add_info_col = false, which
     }
 
     // Define how to update contents on attribute change:
+    
     let update_effective_contents = function(){
         // get current settings:
         let username = effective_container.attr('username')

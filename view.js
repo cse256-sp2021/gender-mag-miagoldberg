@@ -1,6 +1,23 @@
 // ---- Define your dialogs  and panels here ----
+$(document).ready(function() {
+    $('.permbutton').append('Permissions')
+})
+effectivePerm = define_new_effective_permissions("eP", true)
+$('#sidepanel').append(effectivePerm)
+userSelection = define_new_user_select_field("uS", "Click Here to Select User and View Permissions", function(selected_user) {$('#eP').attr('username', selected_user)})
+$('#sidepanel').prepend(userSelection)
+$('#eP').attr('filepath', '/C/presentation_documents/important_file.txt')
+newDialog = define_new_dialog("nD", "Info")
+$('.perm_info').click(function(){
 
+    console.log($('#eP').attr('filepath'))
+    console.log($('#eP').attr('username'))
+    console.log($(this).attr('permission_name'))
 
+    newDialog.dialog('open')
+    let explain = allow_user_action(path_to_file[$('#eP').attr('filepath')], all_users[$('#eP').attr('username')], $(this).attr('permission_name'), true)
+    newDialog.text(get_explanation_text(explain))
+})
 
 // ---- Display file structure ----
 
