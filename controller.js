@@ -47,7 +47,7 @@ permission_groups = {
         permissions.READ_PERMS,
         permissions.EXECUTE,
     ],
-    Modify: [
+    Modify_Delete: [
         permissions.WRITE_DATA,
         permissions.APPEND_DATA,
         permissions.WRITE_ATTR,
