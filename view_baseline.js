@@ -8,7 +8,7 @@ show_starter_dialogs = true // set this to "false" to disable the survey and 3-m
 perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
     // The following are standard jquery-ui options. See https://jqueryui.com/dialog/
     height: 500,
-    width: 400,
+    width: 700,
     buttons: {
         OK:{
             text: "OK",
@@ -32,7 +32,7 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
 obj_name_div = $('<div id="permdialog_objname" class="section">Object Name: <span id="permdialog_objname_namespan"></span> </div>')
 
 //Make the div with the explanation about special permissions/advanced settings:
-advanced_expl_div = $('<div id="permdialog_advanced_explantion_text">Note: Deny overrides Allow. <br> For special permissions or advanced settings, click Advanced.</div>')
+advanced_expl_div = $('<div id="permdialog_advanced_explantion_text">Note: Deny overrides Allow. <br> Grey checkboxes indicate that these permissions are inherited from another document. <br> <b> For inheritance settings, special permissions, and advanced settings click Advanced. </b></div>')
 
 // Make the (grouped) permission checkboxes table:
 grouped_permissions = define_grouped_permission_checkboxes('permdialog_grouped_permissions')
@@ -318,7 +318,7 @@ $( "#advtabs" ).tabs({
 let adv_contents = $(`#advdialog`).dialog({
     position: { my: "top", at: "top", of: $('#html-loc') },
     width: 700,
-    height: 450,
+    height: 475,
     modal: true,
     autoOpen: false,
     appendTo: "#html-loc",

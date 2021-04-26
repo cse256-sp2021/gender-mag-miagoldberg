@@ -1,6 +1,6 @@
 // ---- Define your dialogs  and panels here ----
 $(document).ready(function() {
-    $('.permbutton').append('Permissions')
+    $('.permbutton').append('<u>View Permissions for this file</u>')
 })
 effectivePerm = define_new_effective_permissions("eP", true)
 $('#sidepanel').append(effectivePerm)
