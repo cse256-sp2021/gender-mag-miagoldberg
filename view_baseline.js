@@ -18,7 +18,7 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
             }
         },
         Advanced: {
-            text: "Advanced",
+            text: "More",
             id: "perm-dialog-advanced-button",
             click: function() {
                 open_advanced_dialog(perm_dialog.attr('filepath'))
@@ -32,7 +32,7 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
 obj_name_div = $('<div id="permdialog_objname" class="section">Object Name: <span id="permdialog_objname_namespan"></span> </div>')
 
 //Make the div with the explanation about special permissions/advanced settings:
-advanced_expl_div = $('<div id="permdialog_advanced_explantion_text">Note: Deny overrides Allow. <br> Grey checkboxes indicate that these permissions are inherited from another document. <br> <b> For inheritance settings, special permissions, and advanced settings click Advanced. </b></div>')
+advanced_expl_div = $('<div id="permdialog_advanced_explantion_text">Note: Deny overrides Allow. <br> Grey checkboxes indicate that these permissions are inherited from another document. <br> <b> For inheritance settings, special permissions, and advanced settings click More. </b></div>')
 
 // Make the (grouped) permission checkboxes table:
 grouped_permissions = define_grouped_permission_checkboxes('permdialog_grouped_permissions')
@@ -79,7 +79,7 @@ cant_remove_dialog.html(`
 <div id="cant_remove_text">
     You can't remove <span id="cant_remove_username_1" class = "cant_remove_username"></span> because this object is inheriting permissions from 
     its parent. To remove <span id="cant_remove_username_2" class = "cant_remove_username"></span>, you must prevent this object from inheriting permissions.
-    <b>In "Advanced," uncheck the option for inheriting permissions (use "Add" to maintain existing permissions), and then try removing <span id="cant_remove_username_3" class = "cant_remove_username"></span>  again.</b>
+    <b>In "More," uncheck the option for inheriting permissions (use "Add" to maintain existing permissions), and then try removing <span id="cant_remove_username_3" class = "cant_remove_username"></span>  again.</b>
 </div>`)
 
 // Make a confirmation "are you sure you want to remove?" dialog
